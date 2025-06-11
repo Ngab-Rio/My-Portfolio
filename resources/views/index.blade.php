@@ -69,6 +69,11 @@
           after:transition-all after:duration-300 hover:after:w-full">
           Blog
         </a>
+        <a href="#project" id="nav-link" class="relative inline-block pb-1
+          after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-green-600
+          after:transition-all after:duration-300 hover:after:w-full">
+          Projects
+        </a>
         <a href="#contact" id="nav-link" class="relative inline-block pb-1
           after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-green-600
           after:transition-all after:duration-300 hover:after:w-full">
@@ -80,6 +85,7 @@
     <a href="#home" class="hover:text-green-500">Home</a>
     <a href="#about" class="hover:text-green-500">About</a>
     <a href="#blog" class="hover:text-green-500">Blog</a>
+    <a href="#project" class="hover:text-green-500">Projects</a>
     <a href="#contact" class="hover:text-green-500">Contact</a>
   </div>
   </header>
@@ -100,7 +106,7 @@
           I'm a <span id="typing" class="border-r-2 border-green-600 pr-1 text-green-600"></span>
         </h5>
         <p class="text-base max-w-md mx-auto md:mx-0">
-          Saya seorang IT Enthusiast yang bersemangat dalam menjelajahi tren teknologi terbaru, coding, dan menciptakan solusi digital yang inovatif.    
+          Saya seorang IT Enthusiast yang bersemangat dalam menjelajahi tren teknologi terbaru, coding, dan menciptakan solusi digital yang inovatif.
         </p>
         <div class="flex justify-center md:justify-start space-x-6 mt-6 text-2xl">
             <a href="https://instagram.com/ngabrio_1975" target="_blank" aria-label="Instagram" class="hover:text-green-600 transition">
@@ -151,13 +157,55 @@
         @endphp
         @foreach($blogs as $blog)
         <article class="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-xl transition">
-          <h3 class="text-xl font-bold mb-2 text-green-400">{{ $blog->judul }}</h3>
+          <h3 class="text-xl font-bold mb-2 text-green-400">{!! Str::limit(strip_tags($parsedown->text($blog->judul)), 25, '...')  !!}</h3>
           <p class="text-gray-300 mb-4">{!! Str::limit(strip_tags($parsedown->text($blog->deskripsi)), 100, '...') !!}</p>
-          <a href="{{ url('blog/'. $blog->id) }}" class="text-green-500 hover:text-green-400">Baca Selengkapnya &rarr;</a>
+          <a href="{{ url('blog/'. $blog->id) }}" class="text-green-500 hover:text-green-400 mt-4">Baca Selengkapnya &rarr;</a>
         </article>
         @endforeach
       </div>
     </section>
+
+    <!-- PROJECTS -->
+    <section id="project" class="py-40 bg-gray-900">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-semibold mb-12 text-center text-green-500 underline decoration-green-500 decoration-4">
+          Projects
+        </h2>
+
+        <!-- Kontainer card -->
+<div class="flex flex-wrap justify-center gap-8">
+  <a href="https://ctf.ngabrio.my.id" class="w-full max-w-md">
+    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col h-full">
+      <img src="src/assets/thpctf.png" alt="Project Image" class="w-full h-56 object-cover rounded-t-lg">
+      <div class="p-4 flex flex-col flex-grow">
+        <h3 class="text-xl font-bold text-green-400 mb-2">THPCTF</h3>
+        <p class="text-gray-300 text-sm mb-4 flex-grow">
+          Sebagai Problem Setter yang merancang tantangan untuk komunitas CTF SMK Tunas Harapan Pati, saya juga berperan dalam pengembangan website serta manajemen server yang digunakan dalam kegiatan tersebut.
+        </p>
+      </div>
+    </div>
+  </a>
+
+  <a href="https://t.me/CTF_Quizz_bot" class="w-full max-w-md">
+    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col h-full">
+      <img src="src/assets/bot.png" alt="Project Image" class="w-full h-56 object-cover rounded-t-lg">
+      <div class="p-4 flex flex-col flex-grow">
+        <h3 class="text-xl font-bold text-green-400 mb-2">THPCTF BOT</h3>
+        <p class="text-gray-300 text-sm mb-4 flex-grow">
+          Sebagai developer, saya juga membuat chatbot Telegram bernama THPCTF_quiziz yang dirancang untuk memberikan kuis interaktif dan tantangan seru bagi komunitas CTF SMK Tunas Harapan Pati, sehingga mendukung kegiatan belajar dan kompetisi secara lebih menarik.
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+        <div class="flex flex-wrap justify-center gap-8">
+
+        </div>
+      </div>
+    </section>
+
 
     <!-- CONTACT -->
     <section id="contact" class="mb-20  py-40">
@@ -165,7 +213,7 @@
         <h2 class="text-3xl font-semibold text-center text-green-500 mb-6 underline decoration-green-500">Contact Me</h2>
           <div>
             <label for="name" class="block mb-1 font-medium">Name</label>
-            <input type="text" id="name" name="name" required class="w-full bg-gray-700 text-white p-2 rounded outline-none" placeholder="Your name" />  
+            <input type="text" id="name" name="name" required class="w-full bg-gray-700 text-white p-2 rounded outline-none" placeholder="Your name" />
           </div>
           <div class="py-6">
             <label for="email" class="block mb-1 font-medium">Email</label>
@@ -209,7 +257,7 @@
             </a>
           </div>
           <div class="flex justify-center py-6 mb-6">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4XHijJfABTtUCW3Bp6KFvr?utm_source=generator" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" class="rounded-lg shadow-lg"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2fuYa3Lx06QQJAm0MjztKr?utm_source=generator" width="300" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
           </div>
       <p class="text-xs text-gray-500 mt-6">&copy; 2025 Maman Adi Firmansyah. All rights reserved.</p>
     </div>

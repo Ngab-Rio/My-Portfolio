@@ -37,6 +37,11 @@
           after:transition-all after:duration-300 hover:after:w-full">
           Blog
         </a>
+        <a href="/#project" id="nav-link" class="relative inline-block pb-1
+          after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-green-600
+          after:transition-all after:duration-300 hover:after:w-full">
+          Projects
+        </a>
         <a href="/#contact" id="nav-link" class="relative inline-block pb-1
           after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-green-600
           after:transition-all after:duration-300 hover:after:w-full">
@@ -45,10 +50,11 @@
       </nav>
     </div>
   <div id="mobile-menu" class="md:hidden hidden flex-col px-6 pb-4 bg-gray-800 space-y-2 text-white font-medium">
-    <a href="#home" class="hover:text-green-500">Home</a>
-    <a href="#about" class="hover:text-green-500">About</a>
-    <a href="#blog" class="hover:text-green-500">Blog</a>
-    <a href="#contact" class="hover:text-green-500">Contact</a>
+    <a href="/#home" class="hover:text-green-500">Home</a>
+    <a href="/#about" class="hover:text-green-500">About</a>
+    <a href="/#blog" class="hover:text-green-500">Blog</a>
+    <a href="/#project" class="hover:text-green-500">Projects</a>
+    <a href="/#contact" class="hover:text-green-500">Contact</a>
   </div>
   </header>
   
@@ -125,6 +131,33 @@
       <p class="text-xs text-gray-500 mt-6">&copy; 2025 Maman Adi Firmansyah. All rights reserved.</p>
     </div>
   </footer>
+
+<script>
+      function toggleNavbar() {
+      const menu = document.getElementById("mobile-menu");
+      menu.classList.toggle("hidden");
+    }
+
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll("nav a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          current = section.getAttribute("id");
+        }
+      });
+      navLinks.forEach((link) => {
+        link.classList.remove("nav-active");
+        if (link.getAttribute("href") === `#${current}`) {
+          link.classList.add("nav-active");
+        }
+      });
+    });
+</script>
 
 </body>
 </html>
