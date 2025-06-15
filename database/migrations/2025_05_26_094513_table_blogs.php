@@ -17,6 +17,14 @@ return new class extends Migration
             $table->text('deskripsi');
             $table->timestamps();
         });
+
+        Schema::create('contact_me', function (Blueprint $table){
+            $table->id();
+            $table->string('nama');
+            $table->string('email')->uniqe();
+            $table->text('deskripsi');
+            $table->timestamps();
+        });
     }
 
     /**

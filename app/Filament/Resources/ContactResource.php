@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\BlogResource\Pages;
-use App\Filament\Resources\BlogResource\RelationManagers;
-use App\Models\Blog;
+use App\Filament\Resources\ContactResource\Pages;
+use App\Filament\Resources\ContactResource\RelationManagers;
+use App\Models\Contact;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -12,31 +12,22 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Textarea;
 
-
-class BlogResource extends Resource
+class ContactResource extends Resource
 {
-    protected static ?string $model = Blog::class;
+    protected static ?string $model = Contact::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-envelope';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                TextInput::make('judul')
-                    ->label('Judul')
-                    ->placeholder('Masukkan Judul Blog')
-                    ->required()
-                    ->maxLength(255),
-
-                MarkdownEditor::make('deskripsi')
-                    ->label('Deskripsi')
-                    ->placeholder('Masukkan Deskripsi Blog')
-                    ->required()
-                    ->columnSpan('full'), // optional, biar full width
+                TextInput::make('nama')->disabled(),
+                TextInput::make('email')->disabled(),
+                Textarea::make('deskripsi')->disabled()->rows(4),
             ]);
     }
 
@@ -44,15 +35,16 @@ class BlogResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('judul')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('nama')->searchable(),
+                Tables\Columns\TextColumn::make('email')->searchable(),
                 Tables\Columns\TextColumn::make('deskripsi')->limit(50),
+                Tables\Columns\TextColumn::make('created_at')->dateTime('d M Y, H:i'),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\ViewAction::make(),
-                Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
@@ -72,10 +64,8 @@ class BlogResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListBlogs::route('/'),
-            'create' => Pages\CreateBlog::route('/create'),
-            'view' => Pages\ViewBlog::route('/{record}'),
-            'edit' => Pages\EditBlog::route('/{record}/edit'),
+            'index' => Pages\ListContacts::route('/'),
+            'view' => Pages\ViewContact::route('/{record}')
         ];
     }
 }

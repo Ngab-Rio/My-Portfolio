@@ -6,6 +6,7 @@
   <title>NgabRio | Home</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
   <style>
     html {
@@ -208,24 +209,45 @@
 
 
     <!-- CONTACT -->
-    <section id="contact" class="mb-20  py-40">
+    <section id="contact" class="mb-20 py-40">
       <div class="bg-gray-800 max-w-2xl mx-auto p-8 rounded-2xl shadow-md">
         <h2 class="text-3xl font-semibold text-center text-green-500 mb-6 underline decoration-green-500">Contact Me</h2>
-          <div>
-            <label for="name" class="block mb-1 font-medium">Name</label>
-            <input type="text" id="name" name="name" required class="w-full bg-gray-700 text-white p-2 rounded outline-none" placeholder="Your name" />
+        @if (session('success'))
+          <div 
+            x-data="{ show: true }" 
+            x-show="show" 
+            x-init="setTimeout(() => show = false, 4000)" 
+            x-transition 
+            class="bg-green-600 text-white px-4 py-3 rounded mb-5 shadow-lg"
+          >
+            <div class="flex items-center justify-between">
+              <p>{{ session('success') }}</p>
+              <button @click="show = false" class="text-white hover:text-gray-200 text-lg font-bold">&times;</button>
+            </div>
           </div>
+        @endif
+        <form action="{{ route('contact.store') }}" method="POST">
+          @csrf
+
+          <div>
+            <label for="nama" class="block mb-1 font-medium">Name</label>
+            <input type="text" id="nama" name="nama" required class="w-full bg-gray-700 text-white p-2 rounded outline-none" placeholder="Your name" />
+          </div>
+
           <div class="py-6">
             <label for="email" class="block mb-1 font-medium">Email</label>
             <input type="email" id="email" name="email" required class="w-full bg-gray-700 text-white p-2 rounded outline-none" placeholder="you@example.com" />
           </div>
+
           <div>
-            <label for="message" class="block mb-1 font-medium">Message</label>
-            <textarea id="message" name="message" rows="4" required class="w-full bg-gray-700 text-white p-2 rounded outline-none resize-none mb-7" placeholder="Your message..."></textarea>
+            <label for="deskripsi" class="block mb-1 font-medium">Message</label>
+            <textarea id="deskripsi" name="deskripsi" rows="4" required class="w-full bg-gray-700 text-white p-2 rounded outline-none resize-none mb-7" placeholder="Your message..."></textarea>
           </div>
-          <button type="button" class="w-full bg-green-600 hover:bg-green-500 text-white py-3 rounded font-semibold">
+
+          <button type="submit" class="w-full bg-green-600 hover:bg-green-500 text-white py-3 rounded font-semibold">
             Send Message
           </button>
+        </form>
       </div>
     </section>
   </main>
