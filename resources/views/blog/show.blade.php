@@ -51,6 +51,10 @@
     pre:hover .copy-btn {
       display: block;
     }
+    
+    .prose h1, .prose h2 {
+      font-size: 2rem; /* Tailwind green-500 */
+    }
   </style>
 </head>
 <body class="bg-gray-900 text-white">
