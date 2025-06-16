@@ -53,7 +53,8 @@
     }
     
     .prose h1, .prose h2 {
-      font-size: 2rem; /* Tailwind green-500 */
+      font-size: 1.5rem; 
+      color: #22c55e;/* Tailwind green-500 */
     }
   </style>
 </head>
