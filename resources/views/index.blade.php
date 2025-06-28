@@ -270,7 +270,7 @@
                 />
               </svg>
             </a>
-            <a href="https://www.linkedin.com/in/maman-adi-firmansyah-b83771" target="_blank" aria-label="LinkedIn" class="hover:text-green-600 transition">
+            <a href="https://www.linkedin.com/in/maman-adi-firmansyah-b837712b9" target="_blank" aria-label="LinkedIn" class="hover:text-green-600 transition">
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
                 <path
                   d="M19 3A2 2 0 0121 5v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zm-9.75 14v-5.5H7.5v5.5h1.75zm-1.5-6.3a1.02 1.02 0 110-2.05 1.02 1.02 0 010 2.05zm8.25 6.3v-3c0-1.58-1.82-1.46-1.82 0v3h1.82z"
