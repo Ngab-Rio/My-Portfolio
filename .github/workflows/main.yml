@@ -22,4 +22,5 @@ jobs:
           port: 55154
           script: |
             cd /var/www/html/MyBlog/My-Portfolio
+            git config --global --add safe.directory /var/www/html/MyBlog/My-Portfolio
             git pull origin main
