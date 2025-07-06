@@ -18,7 +18,7 @@ jobs:
         with:
           host: ${{ secrets.HOSTNAME }}
           username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSH_KEY }}  # Switch to SSH key authentication
+          key: ${{ secrets.PASSWORD }}  # Switch to SSH key authentication
           port: 55154
           script: |
             # Switch to web server user
