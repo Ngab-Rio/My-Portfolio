@@ -21,8 +21,30 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: 55154
           script: |
+            # Navigate to project directory
             cd /var/www/html/MyBlog/My-Portfolio
+            
+            # Set safe directory
             git config --global --add safe.directory /var/www/html/MyBlog/My-Portfolio
-            git stash
+            
+            # Reset any local changes
+            git reset --hard HEAD
+            
+            # Clean untracked files
+            git clean -fd
+            
+            # Pull latest changes
             git pull origin main
-            git stash pop
+            
+            # Fix permissions
+            sudo chown -R www-data:www-data .
+            sudo find . -type d -exec chmod 755 {} \;
+            sudo find . -type f -exec chmod 644 {} \;
+            sudo chmod -R 775 storage bootstrap/cache
+            
+            # Laravel specific commands
+            composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev
+            php artisan optimize:clear
+            php artisan view:cache
+            php artisan config:cache
+            php artisan route:cache
