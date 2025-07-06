@@ -183,7 +183,7 @@
               <div class="p-4 flex flex-col flex-grow">
                 <h3 class="text-xl font-bold text-green-400 mb-2">Website Manajemen Keuangan</h3>
                   <p class="text-gray-300 text-sm mb-4 flex-grow">
-                    Website ini dirancang untuk membantu pengguna dalam mengelola keuangan pribadi secara efisien. Dengan fitur pencatatan pemasukan dan pengeluaran, pengguna dapat memantau arus kas harian, membuat laporan keuangan, serta merencanakan anggaran bulanan dengan lebih terstruktur dan mudah dipahami.
+                    Website ini saya kembangkan khusus untuk keperluan pribadi dalam mengelola dan memantau keuangan harian. Aplikasi ini tidak ditujukan untuk penggunaan umum, melainkan sebagai alat bantu internal yang saya sesuaikan dengan kebutuhan dan kebiasaan finansial saya sendiri.
                   </p>
               </div>
             </div>
