@@ -182,9 +182,9 @@
               <img src="src/assets/e-money.png" alt="E-Money Project" class="w-full h-56 object-cover rounded-t-lg">
               <div class="p-4 flex flex-col flex-grow">
                 <h3 class="text-xl font-bold text-green-400 mb-2">Website Manajemen Keuangan</h3>
-                <p class="text-gray-300 text-sm mb-4 flex-grow">
-                  Sebagai developer, saya juga membuat chatbot Telegram bernama THPCTF_quiziz yang dirancang untuk memberikan kuis interaktif dan tantangan seru bagi komunitas CTF SMK Tunas Harapan Pati, sehingga mendukung kegiatan belajar dan kompetisi secara lebih menarik.
-                </p>
+                  <p class="text-gray-300 text-sm mb-4 flex-grow">
+                    Website ini dirancang untuk membantu pengguna dalam mengelola keuangan pribadi secara efisien. Dengan fitur pencatatan pemasukan dan pengeluaran, pengguna dapat memantau arus kas harian, membuat laporan keuangan, serta merencanakan anggaran bulanan dengan lebih terstruktur dan mudah dipahami.
+                  </p>
               </div>
             </div>
           </a>
