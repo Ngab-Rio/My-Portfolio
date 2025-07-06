@@ -18,39 +18,36 @@ jobs:
         with:
           host: ${{ secrets.HOSTNAME }}
           username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.PASSWORD }}  # Switch to SSH key authentication
+          password: ${{ secrets.PASSWORD }}
           port: 55154
           script: |
-            # Switch to web server user
-            sudo -u www-data bash << 'EOF'
+            # 1. First fix permissions as normal user
             cd /var/www/html/MyBlog/My-Portfolio
+            sudo chown -R $USER:www-data .
+            sudo find . -type d -exec chmod 775 {} \;
+            sudo find . -type f -exec chmod 664 {} \;
             
-            # Reset git state
+            # 2. Reset git repository
             git reset --hard
             git clean -fd
-            
-            # Pull changes
             git pull origin main
             
-            # Fix composer permissions
-            chown -R www-data:www-data /var/www/html/MyBlog/My-Portfolio/vendor
-            chown -R www-data:www-data /var/www/html/MyBlog/My-Portfolio/composer.lock
+            # 3. Fix web server permissions
+            sudo chown -R www-data:www-data storage/
+            sudo chown -R www-data:www-data bootstrap/cache/
+            sudo chmod -R 775 storage/
+            sudo chmod -R 775 bootstrap/cache/
             
-            # Install dependencies
+            # 4. Composer install
             composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev
             
-            # Laravel maintenance
-            php artisan optimize:clear
-            php artisan view:cache
-            php artisan config:cache
-            php artisan route:cache
+            # 5. Laravel maintenance
+            sudo -u www-data php artisan optimize:clear
+            sudo -u www-data php artisan view:cache
+            sudo -u www-data php artisan config:cache
+            sudo -u www-data php artisan route:cache
             
-            # Fix storage permissions
-            chmod -R 775 storage/
-            chmod -R 775 bootstrap/cache/
-            EOF
-            
-            # Final permission fix
-            sudo chown -R www-data:www-data /var/www/html/MyBlog/My-Portfolio
-            sudo chmod -R 775 /var/www/html/MyBlog/My-Portfolio/storage
-            sudo chmod -R 775 /var/www/html/MyBlog/My-Portfolio/bootstrap/cache
+            # 6. Ensure log file exists
+            sudo touch storage/logs/laravel.log
+            sudo chown www-data:www-data storage/logs/laravel.log
+            sudo chmod 664 storage/logs/laravel.log
