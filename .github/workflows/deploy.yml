@@ -26,6 +26,8 @@ jobs:
             
             # Set safe directory
             git config --global --add safe.directory /var/www/html/MyBlog/My-Portfolio
+
+            git config pull.rebase true
             
             # Reset any local changes
             git reset --hard HEAD
