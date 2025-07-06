@@ -18,33 +18,39 @@ jobs:
         with:
           host: ${{ secrets.HOSTNAME }}
           username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
+          key: ${{ secrets.SSH_KEY }}  # Switch to SSH key authentication
           port: 55154
           script: |
-            # Navigate to project directory
+            # Switch to web server user
+            sudo -u www-data bash << 'EOF'
             cd /var/www/html/MyBlog/My-Portfolio
             
-            # Set safe directory
-            git config --global --add safe.directory /var/www/html/MyBlog/My-Portfolio
-            
-            # Reset any local changes
-            git reset --hard HEAD
-            
-            # Clean untracked files
+            # Reset git state
+            git reset --hard
             git clean -fd
             
-            # Pull latest changes
+            # Pull changes
             git pull origin main
             
-            # Fix permissions
-            sudo chown -R www-data:www-data .
-            sudo find . -type d -exec chmod 755 {} \;
-            sudo find . -type f -exec chmod 644 {} \;
-            sudo chmod -R 775 storage bootstrap/cache
+            # Fix composer permissions
+            chown -R www-data:www-data /var/www/html/MyBlog/My-Portfolio/vendor
+            chown -R www-data:www-data /var/www/html/MyBlog/My-Portfolio/composer.lock
             
-            # Laravel specific commands
+            # Install dependencies
             composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev
+            
+            # Laravel maintenance
             php artisan optimize:clear
             php artisan view:cache
             php artisan config:cache
             php artisan route:cache
+            
+            # Fix storage permissions
+            chmod -R 775 storage/
+            chmod -R 775 bootstrap/cache/
+            EOF
+            
+            # Final permission fix
+            sudo chown -R www-data:www-data /var/www/html/MyBlog/My-Portfolio
+            sudo chmod -R 775 /var/www/html/MyBlog/My-Portfolio/storage
+            sudo chmod -R 775 /var/www/html/MyBlog/My-Portfolio/bootstrap/cache
