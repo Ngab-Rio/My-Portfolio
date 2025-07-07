@@ -238,7 +238,7 @@
       <h2 class="text-lg font-semibold">Maman Adi Firmansyah</h2>
       
       <div class="flex justify-center space-x-6 mt-6 text-2xl">
-        <a href="https://instagram.com/ngabrio_1975" target="_blank" aria-label="Instagram" class="hover:text-green-600 transition">
+        <a href="https://instagram.com/maman.ngabrio" target="_blank" aria-label="Instagram" class="hover:text-green-600 transition">
           <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
             <path d="M7.75 2A5.75 5.75 0 002 7.75v8.5A5.75 5.75 0 007.75 22h8.5A5.75 5.75 0 0022 16.25v-8.5A5.75 5.75 0 0016.25 2h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm6.5-1.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM12 9.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5z"/>
           </svg>
