@@ -11,7 +11,7 @@ services:
     depends_on:
       - mysql
     volumes:
-      - my-portfolio:/var/www/html
+      - .:/var/www/html
     networks:
       - my-portfolio
     
