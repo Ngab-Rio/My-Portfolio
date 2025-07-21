@@ -34,6 +34,7 @@ services:
 
 volumes:
   mysql-data:
+  my-portfolio:
 
 networks:
   my-portfolio:
