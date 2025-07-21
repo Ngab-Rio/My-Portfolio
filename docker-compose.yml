@@ -1,0 +1,40 @@
+services:
+  my-portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: my-portfolio
+    env_file: 
+      - ./.env
+    ports:
+      - "8081:80"
+    depends_on:
+      - mysql
+    volumes:
+      - my-portfolio:/var/www/html
+    networks:
+      - my-portfolio
+    
+  mysql:
+    image: mysql:latest
+    container_name: mysql
+    ports:
+      - "3307:3306"
+    environment:
+      DB_HOST=${DB_HOST}
+      DB_PORT=${DB_PORT}
+      DB_DATABASE=${DB_DATABASE}
+      DB_USERNAME=${DB_USERNAME}
+      DB_PASSWORD=${DB_PASSWORD}
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - my-portfolio
+
+
+volumes:
+  mysql-data:
+
+networks:
+  my-portfolio:
+    driver: bridge
