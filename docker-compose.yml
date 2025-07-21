@@ -4,6 +4,8 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: my-portfolio
+    depends_on:
+      - db
     restart: unless-stopped
     tty: true
     environment:
