@@ -22,6 +22,11 @@ RUN git config --global --add safe.directory /var/www/html \
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY supervisord.conf /etc/supervisord.conf
 
+
+RUN mkdir -p /var/log/supervisor && \
+    chmod -R 777 /var/log/supervisor
+
+
 EXPOSE 80
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
