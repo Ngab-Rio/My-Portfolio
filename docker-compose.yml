@@ -1,0 +1,52 @@
+services:
+  my-portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: my-portfolio
+    restart: unless-stopped
+    tty: true
+    environment:
+      SERVICE_NAME: app
+      SERVICE_TAGS: dev
+    working_dir: /var/www
+    volumes:
+      - .:/var/www
+    networks:
+      - maman-portfolio-network
+
+  webserver:
+    image: nginx:alpine
+    container_name: nginx-webserver
+    restart: unless-stopped
+    ports:
+      - "8081:80"
+    volumes:
+      - .:/var/www
+      - ./nginx:/etc/nginx/conf.d/
+    networks:
+      - maman-portfolio-network
+
+  db:
+    image: mysql:5.7
+    container_name: mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USER}
+    ports:
+      - "3307:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks:
+      - maman-portfolio-network
+
+networks:
+  maman-portfolio-network:
+    driver: bridge
+
+volumes:
+  dbdata:
+    driver: local
