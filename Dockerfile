@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y \
     git curl zip unzip libpng-dev libonig-dev libxml2-dev libzip-dev \
     && docker-php-ext-install pdo_mysql mbstring zip exif pcntl bcmath gd intl
 
-RUN which supervisor
+RUN which supervisord   
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 WORKDIR /var/www/html
