@@ -190,7 +190,7 @@
             </div>
           </a>
 
-          <a href="https://schedulo.dimasvermillion.my.id/" class="w-full max-w-md">
+          <a href="https://schedulo.dimasvermilion.my.id/" class="w-full max-w-md">
             <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col h-full">
               <img src="src/assets/schedulo.png" alt="E-Money Project" class="w-full h-56 object-cover rounded-t-lg">
               <div class="p-4 flex flex-col flex-grow">
