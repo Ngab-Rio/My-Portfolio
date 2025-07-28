@@ -189,6 +189,18 @@
               </div>
             </div>
           </a>
+
+          <a href="https://schedulo.dimasvermillion.my.id/" class="w-full max-w-md">
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col h-full">
+              <img src="src/assets/schedulo.png" alt="E-Money Project" class="w-full h-56 object-cover rounded-t-lg">
+              <div class="p-4 flex flex-col flex-grow">
+                <h3 class="text-xl font-bold text-green-400 mb-2">Website Undangan Digital</h3>
+                <p class="text-gray-300 text-sm mb-4 flex-grow">
+                  Website ini saya kembangkan sebagai bagian dari praktik dan pengembangan keterampilan saya di bidang IT Operations dan DevOps. Aplikasi ini berfungsi sebagai alat internal untuk mengelola undangan digital secara terstruktur dan efisien.
+                </p>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </section>
