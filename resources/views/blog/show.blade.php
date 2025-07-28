@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="../src/assets/logo-removebg-preview.png" type="image/png">
   <title>Blog | {{ $blogs->judul }}</title>
 
   <!-- Tailwind CSS -->
@@ -76,7 +77,7 @@
     <article>
       <h1 class="text-3xl font-bold text-green-500 mb-6">{{ $blogs->judul }} ></h1>
 
-      @php $parsedown = new Parsedown(); @endphp
+      @php $parsedown = new ParsedownExtra(); @endphp
       <div class="prose prose-invert max-w-full text-gray-200 prose-headings:text-green-500 prose-a:text-green-400 prose-code:bg-gray-800 prose-code:px-1 prose-code:rounded prose-pre:shadow-lg prose-pre:py-2 prose-pre:px-4 prose-pre:rounded-xl">
         {!! nl2br($parsedown->text($blogs->deskripsi)) !!}
       </div>

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="src/assets/logo-removebg-preview.png" type="image/png">
   <title>NgabRio | Home</title>
   
   <!-- External Resources -->
@@ -80,14 +81,14 @@
     <section id="home" class="mb-20 flex flex-col md:flex-row items-center gap-10 py-20">
       <div class="relative inline-block md:w-1/2 flex justify-center">
         <div class="neon-ring"></div>
-        <img src="src/assets/foto-removebg-preview.png" alt="Profile Photo" class="rounded-full w-60 h-60 md:w-72 md:h-72 object-cover relative z-10 border-4 border-gray-900">
+        <img src="src/assets/pp.png" alt="Profile Photo" class="rounded-full w-60 h-60 md:w-72 md:h-72 object-cover relative z-10 border-4 border-gray-900">
       </div>
       
       <div class="md:w-1/2 text-center md:text-left">
         <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
           Hi, It's <span class="text-green-600">Maman</span>
         </h1>
-        <h5 class="text-2xl md:text-3xl font-extrabold mb-4">
+        <h5 class="text-xl md:text-xl font-extrabold mb-4">
           I'm a <span id="typing" class="border-r-2 border-green-600 pr-1 text-green-600"></span>
         </h5>
         <p class="text-base max-w-md mx-auto md:mx-0">
