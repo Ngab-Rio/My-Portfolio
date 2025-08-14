@@ -53,7 +53,7 @@
 <body class="bg-gray-900 text-white">
 
   {{-- Navbar (tetap seperti strukturmu) --}}
-  <header class="bg-gray-800 shadow-md fixed w-full top-0 left-0 z-50">
+  <header class="bg-gray-800/50 backdrop-blur-md shadow-md fixed w-full top-0 left-0 z-50">
     <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
       <h1 class="text-2xl font-bold text-white">Ngab-Rio.</h1>
       <button class="md:hidden text-white text-2xl" onclick="toggleNavbar()">&#9776;</button>

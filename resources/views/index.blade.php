@@ -42,7 +42,7 @@
 
 <body class="bg-gray-900 text-white" style="font-family: 'Fira Code', monospace;">
   <!-- HEADER -->
-  <header class="bg-gray-800 shadow-md fixed w-full top-0 left-0 z-50">
+  <header class="bg-gray-800/50 backdrop-blur-md shadow-md fixed w-full top-0 left-0 z-50">
     <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
       <h1 class="text-2xl font-bold">Ngab-Rio.</h1>
       <button class="md:hidden text-2xl" onclick="toggleNavbar()">&#9776;</button>
@@ -115,19 +115,119 @@
       </div>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section id="about" class="px-6 py-40">
-      <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-3xl font-semibold mb-12 text-green-500 underline decoration-green-500 decoration-4">
-          About Me
-        </h2>
-        <p class="text-base leading-relaxed">
-          Perkenalkan, nama saya <span class="font-semibold text-green-600">Maman Adi Firmansyah</span>. Saya adalah seorang <span class="italic">IT Network Engineer</span> dan <span class="italic">Junior Cyber Security Specialist</span> yang memiliki fokus pada pengelolaan jaringan yang andal serta perlindungan sistem dari berbagai ancaman siber.
-          <br><br>
-          Selain itu, saya juga memiliki ketertarikan besar dalam berbagai bidang IT lainnya seperti <span class="italic">Web Development</span>, <span class="italic">DevOps</span>, dan <span class="italic">automasi sistem</span>. Saya senang mempelajari teknologi baru dan mengerjakan proyek-proyek yang kreatif dan berdampak nyata.
-        </p>
+<!-- ABOUT SECTION -->
+<section id="about" class="mb-20 py-20">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-6 text-center text-green-500 underline decoration-green-500">
+      About Me
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <!-- Tentang Saya -->
+      <div class="space-y-6">
+        <!-- Siapa Saya -->
+<div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700 shadow-lg hover:border-green-500/50 transition duration-300">
+  <h3 class="text-xl font-semibold mb-4 text-green-400 flex items-center gap-2">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A9 9 0 1118.88 6.196 9 9 0 015.12 17.804z" />
+    </svg>
+    Who am i?
+  </h3>
+  <p class="text-gray-300 mb-4">
+    Nama saya <span class="text-green-400 font-medium">Maman Adi Firmansyah</span>, 
+    seorang <span class="italic">IT Network Engineer</span> dengan fokus pada 
+    desain, implementasi, dan pengelolaan infrastruktur jaringan, administrasi Linux, 
+    serta integrasi berbagai teknologi jaringan seperti MikroTik dan Cisco.
+  </p>
+  <p class="text-gray-300">
+    Saya memiliki ketertarikan pada keamanan siber dan otomasi sistem, serta aktif membangun 
+    komunitas teknologi sebagai Founder <span class="text-green-400">THPSEC</span>.
+  </p>
+</div>
+
+
+        <!-- Tech Stack -->
+        <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700 shadow-lg hover:border-green-500/50 transition duration-300">
+          <h3 class="text-xl font-semibold mb-4 text-green-400 flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6h4" />
+            </svg>
+            Technology & Tools
+          </h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-3 py-1 bg-gray-700 hover:bg-green-500/20 rounded-full text-sm text-gray-300 transition flex items-center gap-1">
+              <img src="src/assets/mikrotik.png" alt="MikroTik" class="w-4 h-4">
+              MikroTik
+            </span>
+            <span class="px-3 py-1 bg-gray-700 hover:bg-green-500/20 rounded-full text-sm text-gray-300 transition flex items-center gap-1">
+              <img src="src/assets/linux.png" alt="Linux" class="w-4 h-4">
+              Linux Administration
+            </span>
+            <span class="px-3 py-1 bg-gray-700 hover:bg-green-500/20 rounded-full text-sm text-gray-300 transition flex items-center gap-1">
+              <img src="src/assets/php.png" alt="PHP" class="w-4 h-4">
+              PHP
+            </span>
+            <span class="px-3 py-1 bg-gray-700 hover:bg-green-500/20 rounded-full text-sm text-gray-300 transition flex items-center gap-1">
+              <img src="src/assets/python.png" alt="Python" class="w-4 h-4">
+              Python
+            </span>
+            <span class="px-3 py-1 bg-gray-700 hover:bg-green-500/20 rounded-full text-sm text-gray-300 transition flex items-center gap-1">
+              <img src="src/assets/docker.png" alt="Docker" class="w-4 h-4">
+              Docker
+            </span>
+            <span class="px-3 py-1 bg-gray-700 hover:bg-green-500/20 rounded-full text-sm text-gray-300 transition flex items-center gap-1">
+              <img src="src/assets/laravel.png" alt="Laravel" class="w-4 h-4">
+              Laravel
+            </span>
+            <span class="px-3 py-1 bg-gray-700 hover:bg-green-500/20 rounded-full text-sm text-gray-300 transition flex items-center gap-1">
+              <img src="src/assets/cisco.png" alt="Cisco" class="w-4 h-4">
+              Cisco
+            </span>
+          </div>
+        </div>
       </div>
-    </section>
+
+      <!-- Pendidikan -->
+      <div>
+        <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700 shadow-lg hover:border-green-500/50 transition duration-300 h-full">
+          <h3 class="text-xl font-semibold mb-6 text-green-400">Education</h3>
+          <div class="relative border-l border-green-400/50 pl-6 space-y-8">
+            <!-- SMK -->
+            <div class="relative">
+              <div class="timeline-dot"></div>
+              <div class="pl-4">
+                <h4 class="text-lg font-semibold text-white">SMK Tunas Harapan Pati</h4>
+                <p class="text-sm text-gray-400 italic">Teknik Jaringan Komputer dan Telekomunikasi (2022 – 2025)</p>
+                <p class="text-gray-300 text-sm mt-2">
+                  Berfokus pada infrastruktur jaringan, administrasi Linux, konfigurasi perangkat Mikrotik & Cisco,
+                  pengelolaan Docker, serta keamanan jaringan. Founder THPSEC, komunitas keamanan siber yang aktif
+                  dalam pengembangan keterampilan keamanan digital.
+                </p>
+                <div class="mt-3 space-y-2">
+                  <div class="flex items-start">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-900/50 text-green-400">🏅</span>
+                    <span class="text-sm text-green-400 ml-2">Peringkat 4 LKS Cyber Security Tingkat Provinsi Jawa Tengah</span>
+                  </div>
+                  <div class="flex items-start">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-900/50 text-green-400">🏅</span>
+                    <span class="text-sm text-green-400 ml-2">Finalis WreckIT 5.0 CTF Kategori Pelajar – Politeknik Sandi Siber Negara</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Universitas -->
+            <div class="pl-4 mt-3">
+              <h4 class="text-lg font-semibold text-white">Universitas Teknologi Yogyakarta</h4>
+              <p class="text-sm text-gray-400 italic">Teknik Komputer (2025 - 2029)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
     <!-- BLOG SECTION -->
     <section id="blog" class="mb-20 py-40">
@@ -147,60 +247,30 @@
     </section>
 
     <!-- PROJECTS SECTION -->
-    <section id="project" class="py-40 bg-gray-900">
-      <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-3xl font-semibold mb-12 text-center text-green-500 underline decoration-green-500 decoration-4">
-          Projects
-        </h2>
-
-        <div class="flex flex-wrap justify-center gap-8">
-          <a href="https://ctf.ngabrio.my.id" class="w-full max-w-md">
-            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col h-full">
-              <img src="src/assets/thpctf.png" alt="THPCTF Project" class="w-full h-56 object-cover rounded-t-lg">
-              <div class="p-4 flex flex-col flex-grow">
-                <h3 class="text-xl font-bold text-green-400 mb-2">THPCTF</h3>
-                <p class="text-gray-300 text-sm mb-4 flex-grow">
-                  Sebagai Problem Setter yang merancang tantangan untuk komunitas CTF SMK Tunas Harapan Pati, saya juga berperan dalam pengembangan website serta manajemen server yang digunakan dalam kegiatan tersebut.
-                </p>
+    <section id="project" class="mb-20 py-20">
+      <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-6 text-center text-green-500 underline decoration-green-500">My Projects</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          @foreach($projects as $project)
+          <!-- Project 1 -->
+          <a href="{{ $project->link }}" class="project-card bg-gray-800/50 rounded-xl overflow-hidden border border-gray-700">
+            <div class="h-48 overflow-hidden">
+              <img src="{{ asset('storage/' .  $project->thumbnail) }}" alt="THPCTF Project" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            </div>
+            <div class="p-5">
+              <h3 class="text-xl font-bold text-green-400 mb-2">{{ $project->nama_project }}</h3>
+              <p class="text-gray-400 text-sm">
+                {{ $project->deskripsi_project }}
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                @foreach(explode(',', $project->tech_stack) as $tech_stack)
+                  <span class="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">{{ trim($tech_stack) }}</span>
+                @endforeach
               </div>
             </div>
           </a>
-
-          <a href="https://t.me/CTF_Quizz_bot" class="w-full max-w-md">
-            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col h-full">
-              <img src="src/assets/bot.png" alt="Telegram Bot Project" class="w-full h-56 object-cover rounded-t-lg">
-              <div class="p-4 flex flex-col flex-grow">
-                <h3 class="text-xl font-bold text-green-400 mb-2">THPCTF BOT</h3>
-                <p class="text-gray-300 text-sm mb-4 flex-grow">
-                  Sebagai developer, saya juga membuat chatbot Telegram bernama THPCTF_quiziz yang dirancang untuk memberikan kuis interaktif dan tantangan seru bagi komunitas CTF SMK Tunas Harapan Pati, sehingga mendukung kegiatan belajar dan kompetisi secara lebih menarik.
-                </p>
-              </div>
-            </div>
-          </a>
-          
-          <a href="https://e-money.ngabrio.my.id" class="w-full max-w-md">
-            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col h-full">
-              <img src="src/assets/e-money.png" alt="E-Money Project" class="w-full h-56 object-cover rounded-t-lg">
-              <div class="p-4 flex flex-col flex-grow">
-                <h3 class="text-xl font-bold text-green-400 mb-2">Website Manajemen Keuangan</h3>
-                  <p class="text-gray-300 text-sm mb-4 flex-grow">
-                    Website ini saya kembangkan khusus untuk keperluan pribadi dalam mengelola dan memantau keuangan harian. Aplikasi ini tidak ditujukan untuk penggunaan umum, melainkan sebagai alat bantu internal yang saya sesuaikan dengan kebutuhan dan kebiasaan finansial saya sendiri.
-                  </p>
-              </div>
-            </div>
-          </a>
-
-          <a href="https://schedulo.dimasvermilion.my.id/" class="w-full max-w-md">
-            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col h-full">
-              <img src="src/assets/schedulo.png" alt="E-Money Project" class="w-full h-56 object-cover rounded-t-lg">
-              <div class="p-4 flex flex-col flex-grow">
-                <h3 class="text-xl font-bold text-green-400 mb-2">Website Undangan Digital</h3>
-                <p class="text-gray-300 text-sm mb-4 flex-grow">
-                  Website ini saya kembangkan sebagai bagian dari praktik dan pengembangan keterampilan saya di bidang IT Operations dan DevOps. Aplikasi ini berfungsi sebagai alat internal untuk mengelola undangan digital secara terstruktur dan efisien.
-                </p>
-              </div>
-            </div>
-          </a>
+          @endforeach
         </div>
       </div>
     </section>
