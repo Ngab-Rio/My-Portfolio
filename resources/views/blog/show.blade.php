@@ -65,7 +65,7 @@
         @endforeach
       </nav>
     </div>
-    <div id="mobile-menu" class="md:hidden hidden flex-col px-6 pb-4 bg-gray-800 space-y-2 text-white font-medium">
+    <div id="mobile-menu" class="md:hidden hidden flex-col px-6 pb-4 space-y-2 text-white font-medium">
       @foreach(['home','about','blog','project','contact'] as $section)
       <a href="/#{{ $section }}" class="hover:text-green-500">{{ ucfirst($section) }}</a>
       @endforeach
@@ -82,7 +82,7 @@
         {!! nl2br($parsedown->text($blogs->deskripsi)) !!}
       </div>
 
-      <a href="{{ url('/') }}#blog" class="inline-block mt-12 text-green-400 hover:text-green-200 transition hover:underline">← Kembali ke Blog</a>
+      <a href="{{ url('/') }}#blog" class="inline-block mt-12 text-green-400 hover:text-green-200 transition hover:underline">← Kembali ke Beranda</a>
     </article>
   </main>
 

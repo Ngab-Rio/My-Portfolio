@@ -66,7 +66,7 @@
       </nav>
     </div>
     
-    <div id="mobile-menu" class="md:hidden hidden flex-col px-6 pb-4 bg-gray-800 space-y-2 font-medium">
+    <div id="mobile-menu" class="md:hidden hidden flex-col px-6 pb-4 space-y-2 font-medium">
       <a href="#home" class="hover:text-green-500">Home</a>
       <a href="#about" class="hover:text-green-500">About</a>
       <a href="#blog" class="hover:text-green-500">Blog</a>
@@ -88,9 +88,9 @@
         <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
           Hi, It's <span class="text-green-600">Maman</span>
         </h1>
-        <h5 class="text-xl md:text-xl font-extrabold mb-4">
+        <!-- <h5 class="text-xl md:text-xl font-extrabold mb-4">
           I'm a <span id="typing" class="border-r-2 border-green-600 pr-1 text-green-600"></span>
-        </h5>
+        </h5> -->
         <p class="text-base max-w-md mx-auto md:mx-0">
           Saya seorang IT Enthusiast yang bersemangat dalam menjelajahi tren teknologi terbaru, coding, dan menciptakan solusi digital yang inovatif.
         </p>

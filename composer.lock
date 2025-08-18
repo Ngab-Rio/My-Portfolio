@@ -2063,16 +2063,16 @@
         },
         {
             "name": "kirschbaum-development/eloquent-power-joins",
-            "version": "4.2.7",
+            "version": "4.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kirschbaum-development/eloquent-power-joins.git",
-                "reference": "f2f8d3575a54d91b3e5058d65ac1fccb3ea7dd94"
+                "reference": "d67c7e2efa886d2ef8bb29e86c3ddb9438ac6390"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kirschbaum-development/eloquent-power-joins/zipball/f2f8d3575a54d91b3e5058d65ac1fccb3ea7dd94",
-                "reference": "f2f8d3575a54d91b3e5058d65ac1fccb3ea7dd94",
+                "url": "https://api.github.com/repos/kirschbaum-development/eloquent-power-joins/zipball/d67c7e2efa886d2ef8bb29e86c3ddb9438ac6390",
+                "reference": "d67c7e2efa886d2ef8bb29e86c3ddb9438ac6390",
                 "shasum": ""
             },
             "require": {
@@ -2120,9 +2120,9 @@
             ],
             "support": {
                 "issues": "https://github.com/kirschbaum-development/eloquent-power-joins/issues",
-                "source": "https://github.com/kirschbaum-development/eloquent-power-joins/tree/4.2.7"
+                "source": "https://github.com/kirschbaum-development/eloquent-power-joins/tree/4.2.8"
             },
-            "time": "2025-08-06T10:46:13+00:00"
+            "time": "2025-08-14T18:43:05+00:00"
         },
         {
             "name": "laravel/framework",
@@ -8597,16 +8597,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "10.5.51",
+            "version": "10.5.52",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "ace160e31aaa317a99c411410c40c502b4be42a4"
+                "reference": "5be558244941fba07788b6bb42dc5fc84429580c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ace160e31aaa317a99c411410c40c502b4be42a4",
-                "reference": "ace160e31aaa317a99c411410c40c502b4be42a4",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/5be558244941fba07788b6bb42dc5fc84429580c",
+                "reference": "5be558244941fba07788b6bb42dc5fc84429580c",
                 "shasum": ""
             },
             "require": {
@@ -8678,7 +8678,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.51"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.52"
             },
             "funding": [
                 {
@@ -8702,7 +8702,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-08-12T07:31:25+00:00"
+            "time": "2025-08-16T05:17:33+00:00"
         },
         {
             "name": "sebastian/cli-parser",
