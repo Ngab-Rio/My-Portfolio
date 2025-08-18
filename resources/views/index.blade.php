@@ -126,24 +126,24 @@
       <!-- Tentang Saya -->
       <div class="space-y-6">
         <!-- Siapa Saya -->
-<div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700 shadow-lg hover:border-green-500/50 transition duration-300">
-  <h3 class="text-xl font-semibold mb-4 text-green-400 flex items-center gap-2">
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A9 9 0 1118.88 6.196 9 9 0 015.12 17.804z" />
-    </svg>
-    Who am i?
-  </h3>
-  <p class="text-gray-300 mb-4">
-    Nama saya <span class="text-green-400 font-medium">Maman Adi Firmansyah</span>, 
-    seorang <span class="italic">IT Network Engineer</span> dengan fokus pada 
-    desain, implementasi, dan pengelolaan infrastruktur jaringan, administrasi Linux, 
-    serta integrasi berbagai teknologi jaringan seperti MikroTik dan Cisco.
-  </p>
-  <p class="text-gray-300">
-    Saya memiliki ketertarikan pada keamanan siber dan otomasi sistem, serta aktif membangun 
-    komunitas teknologi sebagai Founder <span class="text-green-400">THPSEC</span>.
-  </p>
-</div>
+        <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700 shadow-lg hover:border-green-500/50 transition duration-300">
+          <h3 class="text-xl font-semibold mb-4 text-green-400 flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A9 9 0 1118.88 6.196 9 9 0 015.12 17.804z" />
+            </svg>
+            Who am i?
+          </h3>
+          <p class="text-gray-300 mb-4">
+            Nama saya <span class="text-green-400 font-medium">Maman Adi Firmansyah</span>, 
+            seorang <span class="italic">IT Network Engineer</span> dengan fokus pada 
+            desain, implementasi, dan pengelolaan infrastruktur jaringan, administrasi Linux, 
+            serta integrasi berbagai teknologi jaringan seperti MikroTik dan Cisco.
+          </p>
+          <p class="text-gray-300">
+            Saya memiliki ketertarikan pada keamanan siber dan otomasi sistem, serta aktif membangun 
+            komunitas teknologi sebagai Founder <span class="text-green-400">THPSEC</span>.
+          </p>
+        </div>
 
 
         <!-- Tech Stack -->
@@ -218,7 +218,7 @@
             <!-- Universitas -->
             <div class="pl-4 mt-3">
               <h4 class="text-lg font-semibold text-white">Universitas Teknologi Yogyakarta</h4>
-              <p class="text-sm text-gray-400 italic">Teknik Komputer (2025 - 2029)</p>
+              <p class="text-sm text-gray-400 italic">Teknik Komputer (2025 - Present)</p>
             </div>
           </div>
         </div>
