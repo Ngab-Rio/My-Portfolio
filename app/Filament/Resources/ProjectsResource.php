@@ -21,7 +21,7 @@ class ProjectsResource extends Resource
 {
     protected static ?string $model = Projects::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-wrench-screwdriver';
 
     public static function form(Form $form): Form
     {
